@@ -19,13 +19,15 @@ export async function generateMetadata({ params }) {
 
   return {
     title: "Memespin - Fair Blockchain Gaming",
-    description: "Experience the thrill of Memespin! Winners share the prize pool, draws get half back, and losers get nothing. Play now!",
+    description:
+      "Experience the thrill of Memespin! Winners share the prize pool, draws get half back, and losers get nothing. Play now!",
     metadataBase: new URL(baseUrl),
     other: {
       "twitter:card": "player",
-      "twitter:site": "@YourTwitterHandle",
+      "twitter:site": "@winksdotfun",
       "twitter:title": "Memespin - Fair Blockchain Gaming",
-      "twitter:description": "Experience the thrill of Memespin! Winners share the prize pool, draws get half back, and losers get nothing. Play now!",
+      "twitter:description":
+        "Experience the thrill of Memespin! Winners share the prize pool, draws get half back, and losers get nothing. Play now!",
       "twitter:player": `${baseUrl}/wink/${address}`,
       "twitter:player:width": "360",
       "twitter:player:height": "560",

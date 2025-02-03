@@ -14,18 +14,18 @@ const geistMono = Geist_Mono({
 // Using Next.js's generateMetadata to have more control over meta tags
 export async function generateMetadata() {
   return {
-    title: "MetisDynamic.winks",
-    description: "Donate crypto on X.",
+    title: "Memespin - Fair Blockchain Gaming",
+    description: "Experience the thrill of Memespin! Winners share the prize pool, draws get half back, and losers get nothing. Play now!",
     // Twitter specific meta tags
     other: {
       'twitter:card': 'player',
-      'twitter:site': '@UltimateDigits',
-      'twitter:title': 'Metis Wink by winks.fun',
-      'twitter:description': 'Donate crypto on X.',
-      'twitter:player': 'https://memespin-test.vercel.app/',
+      'twitter:site': '@winksdotfun',
+      'twitter:title': 'Memespin - Fair Blockchain Gaming',
+      'twitter:description': 'Experience the thrill of Memespin! Winners share the prize pool, draws get half back, and losers get nothing. Play now!',
+      'twitter:player': 'https://memespin.winks.fun',
       'twitter:player:width': '360',
       'twitter:player:height': '560',
-      'twitter:image': 'https://res.cloudinary.com/dg8ssfxu3/image/upload/v1722584912/ud/y6uypvxozxsutmrkhot0.png',
+      'twitter:image': 'https://res.cloudinary.com/dvddnptpi/image/upload/v1738600087/zqhjyzunv8fq8nxt9ggk.png',
     },
   };
 }
