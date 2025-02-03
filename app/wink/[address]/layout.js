@@ -18,7 +18,7 @@ export async function generateMetadata({ params }) {
   const { address } = params;
 
   return {
-    title: "Donate | Dynamic Payment",
+    title: "Memespin - Fair Blockchain Gaming",
     description: "Experience the thrill of Memespin! Winners share the prize pool, draws get half back, and losers get nothing. Play now!",
     metadataBase: new URL(baseUrl),
     other: {
