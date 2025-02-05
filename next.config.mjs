@@ -10,6 +10,12 @@ const nextConfig = {
             },
         ];
     },
+    output: 'standalone',
+    images: {
+        domains: [
+            // Add your image domains here if you're using next/image
+        ],
+    },
 };
 
 export default nextConfig;
