@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export async function generateMetadata({ params }) {
   const baseUrl = "https://memespin.winks.fun";
-  const { address } = params;
+  const address = params;
 
   return {
     title: "Memespin - Fair Blockchain Gaming",
