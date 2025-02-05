@@ -28,7 +28,7 @@ export async function generateMetadata({ params }) {
       "twitter:title": "Memespin - Fair Blockchain Gaming",
       "twitter:description":
         "Experience the thrill of Memespin! Winners share the prize pool, draws get half back, and losers get nothing. Play now!",
-      "twitter:player": `${baseUrl}/wink/${address}`,
+      "twitter:player": `https://memespin.winks.fun/wink/${address}`,
       "twitter:player:width": "360",
       "twitter:player:height": "560",
       "twitter:image":
