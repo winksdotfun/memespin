@@ -38,6 +38,9 @@ export default function DonationPage() {
   };
 
   const iframeUrl = `https://memespin.io/?ref=${recipientAddress}`;
+  console.log('====================================');
+  console.log('iframeUrl', iframeUrl);
+  console.log('====================================');
 
 
   return (
