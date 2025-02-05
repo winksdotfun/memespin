@@ -44,49 +44,12 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-t from-customStart to-customEnd/50 font-mono text-white">
-      <div className="flex justify-center items-center min-h-screen max-w-[500px] mx-auto">
-        <div className="bg-customGrayFill/50 h-fit rounded w-full p-10">
-          <div>
-            Enter Recipient's wallet address
-            <input
-              className={`w-full p-2 bg-transparent border ${
-                !isValidAddress ? 'border-red-500' : 'border-customGrayStroke'
-              } placeholder-slate-500 mt-2 rounded`}
-              placeholder="0x1234567890abcdef1234567890abcdef12345678"
-              value={address}
-              onChange={handleAddressChange}
-            />
-            {!isValidAddress && (
-              <p className="text-red-500 text-sm mt-1">
-                Please enter a valid Ethereum address
-              </p>
-            )}
-          </div>
-          <button
-            className={`bg-customButtonStroke p-2 w-full mt-6 rounded ${
-              !address || !isValidAddress ? 'opacity-50 cursor-not-allowed' : ''
-            }`}
-            onClick={generateLink}
-            disabled={!address || !isValidAddress}
-          >
-            Generate Link
-          </button>
-
-          {generatedLink && (
-            <div className="mt-4">
-              <div className="bg-black/20 p-2 rounded break-all">
-                {generatedLink}
-              </div>
-              <button
-                className="bg-customButtonStroke p-2 w-full mt-2 rounded"
-                onClick={copyToClipboard}
-              >
-                Copy Link
-              </button>
-            </div>
-          )}
-          <p className="text-center pt-4">Powered by winks.fun</p>
-        </div>
+      <div className="flex flex-col items-center justify-center h-screen">
+        <h1 className="text-4xl font-bold">Memespin</h1>
+        <p className="text-lg">
+          Play Memespin, a fair blockchain game where winners share the prize
+          pool, draws get half back, and losers get nothing.
+        </p>
       </div>
     </div>
   );
