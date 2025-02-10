@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import { useParams } from "next/navigation";
-import { ConnectButton } from '../../providers';
 import { useAccount, useSendTransaction, useWaitForTransactionReceipt } from 'wagmi';
 import { parseEther } from 'viem';
 
