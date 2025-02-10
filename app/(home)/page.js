@@ -1,10 +1,12 @@
 "use client";
-import { useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const [address, setAddress] = useState("");
   const [generatedLink, setGeneratedLink] = useState("");
   const [isValidAddress, setIsValidAddress] = useState(true);
+  const [config, setConfig] = useState("");
 
   // Function to validate Ethereum address
   const validateEthAddress = (address) => {
@@ -25,32 +27,40 @@ export default function Home() {
     }
   };
 
-  const generateLink = () => {
-    if (!address || !isValidAddress) return;
-    const link = `http://localhost:3000/wink/${address}`;
-    setGeneratedLink(link);
-  };
-
-  const copyToClipboard = async () => {
-    if (generatedLink) {
+  useEffect(() => {
+    const fetchConfig = async () => {
       try {
-        await navigator.clipboard.writeText(generatedLink);
-        alert("Link copied to clipboard!");
-      } catch (err) {
-        console.error("Failed to copy:", err);
+        const res = await axios.get('/api/config')
+        const data = res.data
+        console.log(typeof data);
+        
+        console.log(data)
+        setConfig(data.REFERRAL)
+      } catch (error) {
+        console.error(error)
       }
     }
-  };
+    
+    fetchConfig()
+  }, [])
+
+  const iframeUrl = `https://memespin.io/?ref=${config}`;
+
 
   return (
-    <div className="min-h-screen bg-gradient-to-t from-customStart to-customEnd/50 font-mono text-white">
-      <div className="flex flex-col items-center justify-center h-screen">
-        <h1 className="text-4xl font-bold">Memespin</h1>
-        <p className="text-lg">
-          Play Memespin, a fair blockchain game where winners share the prize
-          pool, draws get half back, and losers get nothing.
-        </p>
-      </div>
-    </div>
+  //   <iframe 
+  //   src={iframeUrl}
+  //   className="w-full h-screen border-0"
+  //   allow="web3"
+  //   allowFullScreen
+  // />
+  <div className="min-h-screen bg-gradient-to-t from-customStart to-customEnd/50">
+    <iframe 
+      src={iframeUrl}
+      className="w-full h-screen border-0"
+      allow="web3"
+      allowFullScreen
+    />
+  </div>
   );
 }
