@@ -1,6 +1,6 @@
 // app/wink/[address]/layout.js
 import { Geist, Geist_Mono } from "next/font/google";
-import { Providers } from "@/app/providers";
+import { Providers } from "../providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
