@@ -13,7 +13,7 @@ export function ReferrerTracker() {
 
     // Redirect if not coming from Twitter/X
     if (!isFromTwitter) {
-      window.location.href = 'https://winks.fun';
+      window.location.href = 'https://memespin.io/';
     }
   }, []);
 
